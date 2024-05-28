@@ -1,0 +1,5 @@
+<h1>Add a booking</h1>
+<%= simple_form_for [@dog, @booking] do |f| %>
+	<%= f.input :date %>
+	<%= f.submit "Book your buddy", class: "btn btn-primary" %>
+<% end %>

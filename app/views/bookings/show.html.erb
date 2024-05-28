@@ -1,0 +1,7 @@
+<div>
+  <p>Your next date with <%= @booking.dog.name %> is on <%= @booking.date %></p>
+  <p><em>Here is a message from <%= @booking.dog.name %> :</em></p>
+  <p>Thank you, <%= @booking.user.username %> for booking me on <%= @booking.date %>. Let's have fun and I will do my best to find a perfect girl/guy for you</p>
+</div>
+<%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+<%= link_to "Return to bookings' list", user_bookings_path %>

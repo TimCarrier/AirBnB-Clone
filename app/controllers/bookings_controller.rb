@@ -1,24 +1,32 @@
-class BookingsController < ApplicationController 
-  before_action :set_user, only: [:index, :show, :destroy ]
+class BookingsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_user, only: [:index, :show, :destroy, :create]
   before_action :set_dog, only: [:new, :create]
-  before_action :set_booking, only: [:show, :destroy]
   def index
     @bookings = @user.bookings
   end
 
   def show
+    @booking = @user.bookings.find(params[:id])
   end
 
   def new
-    @booking = Booking.new
+    @booking = @dog.bookings.new
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = @dog.bookings.new(booking_params)
+    @booking.user = @user
+    if @booking.save
+      redirect_to user_booking_path(@booking.user, @booking)
+    else
+      render :new, status: 422
+    end
   end
 
   def destroy
-    flash[:notice] = "Booking was successfully deleted." if @booking.destroy
+    @booking = @user.bookings.find(params[:id])
+    @booking.destroy
     redirect_to root_path
   end
 
@@ -29,10 +37,6 @@ class BookingsController < ApplicationController
 
   def set_user
     @user = User.find(params[:user_id])
-  end
-
-  def set_booking
-    @booking = Booking.find(params[:id])
   end
 
   def booking_params

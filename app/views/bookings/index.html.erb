@@ -1,0 +1,7 @@
+<div>
+  <% @bookings.each do |booking| %>
+    <%= link_to user_booking_path(@user, booking) do %>
+      <p>Check your date with <%= booking.dog.name %></p>
+    <% end %>
+  <% end %>
+</div>
