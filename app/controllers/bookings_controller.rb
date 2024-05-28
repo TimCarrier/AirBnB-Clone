@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
-  before_action :set_user, only: [:index]
-  before_action :set_booking, only: [:show]
+  before_action :set_user, only: [:index, :show, :destroy ]
+  before_action :set_dog, only: [:new, :create]
+  before_action :set_booking, only: [:show, :destroy]
   def index
     @bookings = @user.bookings
   end
@@ -17,11 +18,15 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = "User was successfully destroyed." if @user.destroy
+    flash[:notice] = "Booking was successfully deleted." if @booking.destroy
     redirect_to root_path
   end
 
   private
+  def set_dog
+    @dog = Dog.find(params[:dog_id])
+  end
+
   def set_user
     @user = User.find(params[:user_id])
   end

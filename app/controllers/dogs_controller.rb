@@ -33,7 +33,7 @@ class DogsController < ApplicationController
 
   def destroy
     flash[:notice] = "Post was successfully deleted" if @dog.destroy
-    redirect_to dogs_path
+    redirect_to root_path
   end
 
   private
