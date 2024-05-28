@@ -1,4 +1,4 @@
-class BookingsController < ApplicationController
+class BookingsController < ApplicationController 
   before_action :set_user, only: [:index, :show, :destroy ]
   before_action :set_dog, only: [:new, :create]
   before_action :set_booking, only: [:show, :destroy]

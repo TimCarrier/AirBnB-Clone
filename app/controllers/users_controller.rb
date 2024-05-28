@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
   def show
   end
 
@@ -15,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = "User was successfully destroyed." if @user.destroy
+    @user.destroy
     redirect_to root_path
   end
 
