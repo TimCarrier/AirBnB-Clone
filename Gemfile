@@ -29,7 +29,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Faker Gem added to generate fake data (28/05/2024)
-gem 'faker'
+gem "faker"
 
 gem "cloudinary"
 

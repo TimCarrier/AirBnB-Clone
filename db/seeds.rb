@@ -7,3 +7,27 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+# Added gem "faker" to Gemfile
+
+20.times do
+  dogs = Dog.new(
+    name: Faker::Creature::Dog.name,
+    age: rand(1..15),
+    disponibility: Faker::Date.between(from: '2024-05-28', to: '2024-06-03'),
+    race: Faker::Creature::Dog.breed,
+    description: Faker::Lorem.paragraph(sentence_count: 2),
+    address: Faker::Address.full_address,
+    rating: rand(1..5)
+  )
+  dogs.save!
+end
+puts 'Finished!'
+
+#            __
+#       (___()'`;
+#       /,    /`
+#       \\"--\\
+#
+#  Woof! Woof! 🐶
