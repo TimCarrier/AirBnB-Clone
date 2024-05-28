@@ -1,0 +1,17 @@
+<h1><%= @dog.name %></h1>
+<p>
+<%= @dog.race %>
+<hr>
+<%= @dog.age %>
+<hr>
+<%= @dog.disponibility %>
+<hr>
+<%= @dog.description %>
+<hr>
+<%= @dog.address %>
+<hr>
+<%= @dog.rating %>
+</p>
+
+<%= link_to "Request", new_dog_booking_path(@dog) %>
+<%= render "shared/new_dog_form" %>
