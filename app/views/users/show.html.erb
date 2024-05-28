@@ -1,0 +1,13 @@
+<p>My username: <%= @user.username %></p>
+<p>My email: <%= @user.email %></p>
+<p>My first name: <%= @user.first_name %></p>
+<p>My last name: <%= @user.last_name %></p>
+
+<%= link_to "Edit my profile", edit_user_path(@user) %>
+
+<div>
+<%= link_to "Delete my profile",
+  user_path(@user),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger"
+%>
+</div>

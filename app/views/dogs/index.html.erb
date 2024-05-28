@@ -5,3 +5,18 @@
 
 <%= cl_image_tag("xleitucyrfskxymta5c4",
       width: 400, height: 300, crop: :fill) %>
+
+
+<% @dogs.each do |dog| %>
+<li>
+<%= dog.name %>
+<br>
+<%= dog.race %>
+<br>
+<%= dog.disponibility %>
+<br>
+<%= link_to dog.name, dog_path(dog) %>
+<hr>
+</li>
+<% end %>
+<%= render "shared/new_dog_form" %>
