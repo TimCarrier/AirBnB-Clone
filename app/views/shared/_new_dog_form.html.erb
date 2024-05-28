@@ -1,0 +1,19 @@
+<div>
+<%= form_with model: @dog do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :age %>
+<%= f.number_field :age, in: 0..30 %>
+<%= f.label :race %>
+<%= f.text_field :race %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<%= f.label :disponibility %>
+<%= f.date_field :disponibility %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :rating %>
+<%= f.number_field :rating, in: 1..5 %>
+<%= f.submit "Save Changes" %>
+<% end %>
+</div>
