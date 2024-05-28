@@ -15,3 +15,4 @@
 
 <%= link_to "Request", new_dog_booking_path(@dog) %>
 <%= render "shared/new_dog_form" %>
+<%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
