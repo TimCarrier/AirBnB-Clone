@@ -15,13 +15,13 @@
       <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
       <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "top-right-dog-card") %>
       <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
-      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "top-left-dog-card") %>
+      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "bottom-right-dog-card") %>
     </div>
 
   </div>
 
 
-</div>
+
 
 
 <p>
@@ -36,8 +36,16 @@ Address : <%= @dog.address %>
 Rating : <%= @dog.rating %>/5
 <hr>
 </p>
-
 <hr>
-<%= link_to "Request", new_dog_booking_path(@dog) %>
-<%= render "shared/new_dog_form" %>
-<%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<div class="booking-card">
+  <p>
+    Price :
+    <%= @dog.price %>
+    US$
+  </p>
+  <%= link_to "Book the dog", new_dog_booking_path(@dog), class: "booking-btn" %>
+</div>
+<!-- <%= render "shared/new_dog_form" %>
+<%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> -->
+
+</div>
