@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: [:index, :show, :destroy, :create]
+  before_action :set_user, only: [:index, :show, :destroy]
   before_action :set_dog, only: [:new, :create]
   def index
     @bookings = @user.bookings
+    @has_bookings = @bookings.any?
   end
 
   def show
@@ -11,12 +12,13 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = @dog.bookings.new
+    @booking = Booking.new
   end
 
   def create
-    @booking = @dog.bookings.new(booking_params)
-    @booking.user = @user
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.dog = @dog
     if @booking.save
       redirect_to user_booking_path(@booking.user, @booking)
     else
