@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #EF233C;
+  height: 80px;
+  padding: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +13,42 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+#Dog-Search {
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  align-self: center;
+  justify-self: center;
+  width: 50vw;
+  background-image: url('https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png');
+  background-size: 20px 20px;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+}
+
+#Avatar-Icon {
+  background-color: white;
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#dropdown-arrow {
+  max-width: 20px;
+}
+
+#dropdown-list {
+  background-color: white;
+  border-radius: 8px;
+}
+
+#dropdown-li {
+  color: black;
+    &:hover {
+      color: white;
+      background-color: #EF233C;
+    }
+  }
