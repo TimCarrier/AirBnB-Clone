@@ -1,0 +1,62 @@
+.big-dog-show-container {
+  display: block;
+  margin-top: 20px;
+  width: 80%;
+  margin: auto;
+  background-color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 20px;
+}
+
+
+
+.name-race-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+
+  h1, p {
+    // Add any specific styles for h1 and p here
+  }
+}
+
+.dog-pictures-container {
+  display: grid;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+}
+
+.big-picture-container {
+  margin-right: 10px;
+}
+
+.four-pictures-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+}
+
+.small-card-dog {
+
+}
+
+.big-dog-card {
+  border-radius: 5% 0% 0% 5% / 5% 0% 0% 5%
+}
+
+#top-right-dog-card {
+  border-radius: 0% 5% 0% 0% / 0% 5% 0% 0%
+}
+
+#top-left-dog-card {
+  border-radius: 0% 0% 5% 0% / 0% 0% 5% 0%
+}

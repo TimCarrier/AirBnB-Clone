@@ -1,9 +1,52 @@
+  <h1>Our dogs</h1>
+
+<div class="container">
+<div class="row">
+      <% @dogs.each do |dog| %>
+      <%= link_to dog_path(dog), class:"col-3" do %>
+        <div class="card">
+          <%= cl_image_tag("fyekmrfyunui5gd4xktp", width: 200, height: 150, crop: :fill) %>
+          <div class="card-body">
+            <h5 class="card-title"><%= dog.name %></h5>
+            <p class="card-text"><%= dog.race %></p>
+            <p class="card-text">Book now for <%= dog.price %> €</p>
+            <p class="card-text"><%= dog.disponibility %></p>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+</div>
+</div>
 
 <%# test d'une photo cloudinary en display sur localhost:3000/dogs %>
 <%= cl_image_tag("qd2ngefcpsykehj9toyk",
       width: 400, height: 300, crop: :fill) %>
 
-<%= cl_image_tag("xleitucyrfskxymta5c4",
+<%= cl_image_tag("zfykzvcawjoae52d4o4z",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("xmfqol17pvltvog9ubfo",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("kfvuey9td83gukrk0aqs",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("lvaktwypdaaphqurtw39",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("jldyh98qtjn8ojaxwlik",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("xcua2ab7uulghednb8bp",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("cojpefzl62hpslzv5d3r",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("rfotnqdb3rl65fqjpnlk",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("y7zwhva2ljh5mrvufczu",
       width: 400, height: 300, crop: :fill) %>
 
 
@@ -12,6 +55,8 @@
 <%= dog.name %>
 <br>
 <%= dog.race %>
+<br>
+Book today for <%= dog.price %> €
 <br>
 <%= dog.disponibility %>
 <br>

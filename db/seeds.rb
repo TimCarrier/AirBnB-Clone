@@ -10,6 +10,7 @@
 
 
 # Added gem "faker" to Gemfile
+Dog.destroy_all
 
 20.times do
   dogs = Dog.new(
@@ -19,7 +20,8 @@
     race: Faker::Creature::Dog.breed,
     description: Faker::Lorem.paragraph(sentence_count: 2),
     address: Faker::Address.full_address,
-    rating: rand(1..5)
+    rating: rand(1..5),
+    price: rand(10..100)
   )
   dogs.save!
 end

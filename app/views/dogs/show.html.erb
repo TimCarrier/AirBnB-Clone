@@ -1,7 +1,30 @@
-<h1><%= @dog.name %></h1>
+<div class="big-dog-show-container">
+
+  <div class="name-race-container">
+    <h1><%= @dog.name %></h1>
+    <p><%= @dog.race %></p>
+  </div>
+
+
+  <div class="dog-pictures-container">
+
+    <div class="big-picture-container">
+      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 580, height: 510, crop: :fill, class: "big-dog-card") %>
+    </div>
+    <div class="four-pictures-container">
+      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
+      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "top-right-dog-card") %>
+      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
+      <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "top-left-dog-card") %>
+    </div>
+
+  </div>
+
+
+</div>
+
+
 <p>
-<%= @dog.race %>
-<hr>
 <%= @dog.age %>
 <hr>
 <%= @dog.disponibility %>
@@ -11,8 +34,10 @@
 <%= @dog.address %>
 <hr>
 <%= @dog.rating %>
+<hr>
 </p>
 
+<hr>
 <%= link_to "Request", new_dog_booking_path(@dog) %>
 <%= render "shared/new_dog_form" %>
 <%= link_to "Delete", dog_path(@dog), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
