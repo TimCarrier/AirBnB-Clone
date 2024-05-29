@@ -13,6 +13,9 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @taxes = (@dog.price * 0.05).round(2)
+    @services_fee = (@dog.price * 0.02).round(2)
+    @total = (@dog.price + @taxes + @services_fee).round(2)
   end
 
   def create
