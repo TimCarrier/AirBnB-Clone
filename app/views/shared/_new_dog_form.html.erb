@@ -14,6 +14,8 @@
     <%= f.text_field :address %>
     <%= f.label :rating %>
     <%= f.number_field :rating, in: 1..5 %>
+    <%= f.label :price %>
+    <%= f.number_field :price, in: 10..100 %>
     <%= f.file_field :photos, multiple: true %>
     <%= f.submit "Save Changes" %>
   <% end %>

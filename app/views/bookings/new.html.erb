@@ -22,8 +22,7 @@
     <div class="p-3 col-6 card me-2 rounded">
       <div class="card-body">
         <div class="d-flex gap-10">
-          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
-          alt="dog's photo" class="rounded-3 float-start" style="width: 100px; height: 100px;">
+          <%= cl_image_tag @dog.photos.first.key, height: 100, width: 100, crop: :fill, class:"rounded-3 float-start"%>
           <div class="ms-5">
             <h4><%= @dog.name %></h4>
             <p><%= @dog.rating %> ⭐️ (53 reviews) • <%= @status %></p>
