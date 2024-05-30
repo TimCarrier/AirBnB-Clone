@@ -1,8 +1,20 @@
 class DogsController < ApplicationController
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
   def index
-    @dogs = Dog.all
+
+    if params[:query].present?
+      @dogs = Dog.search_by_name_and_race(params[:query])
+    else
+      @dogs = Dog.all
+    end
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
+
     @dog = Dog.new
+
   end
 
   def show
