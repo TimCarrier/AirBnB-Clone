@@ -27,24 +27,26 @@ class DogsController < ApplicationController
       pup_dog = "dog"
     end
 
-    if @dog.rating <= 1
-      rate = "Verybad"
-    elsif @dog.rating > 1 && @dog.rating <= 2
-      rate = "Bad"
-    elsif @dog.rating > 2 && @dog.rating <= 3
-      rate = "Good"
-    elsif @dog.rating > 3 && @dog.rating <= 4
-      rate = "Super"
-    else
-      rate = "Best"
+    if @dog.rating
+      if @dog.rating <= 1
+        rate = "Verybad"
+      elsif @dog.rating > 1 && @dog.rating <= 2
+        rate = "Bad"
+      elsif @dog.rating > 2 && @dog.rating <= 3
+        rate = "Good"
+      elsif @dog.rating > 3 && @dog.rating <= 4
+        rate = "Super"
+      else
+        rate = "Best"
+      end
     end
     @status = "#{rate} #{pup_dog}"
     @nreviews = rand(30..250)
-    
-    @markers = @dog.geocoded.map do {
+
+    @marker = {
       lat: @dog.latitude,
       lng: @dog.longitude}
-	  end
+
   end
 
   def new
