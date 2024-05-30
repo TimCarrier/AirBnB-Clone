@@ -1,6 +1,6 @@
 <div class="row">
       <% @dogs.each do |dog| %>
-      <%= link_to dog_path(dog), class:"col-3" do %>
+      <%= link_to dog_path(dog), class:"col-3", data: { turbo_frame: "_top" } do %>
         <div class="card">
           <% dog.photos.each do |photo| %>
             <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>

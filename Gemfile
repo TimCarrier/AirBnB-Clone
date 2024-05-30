@@ -17,7 +17,7 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+gem "importmap-rails", "~> 1.2.3"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -31,8 +31,11 @@ gem "jbuilder"
 # Faker Gem added to generate fake data (28/05/2024)
 gem "faker"
 
-# Cloudinary & Active Storage
+# Cloudinary gem added to store photos
 gem "cloudinary"
+
+# Geocoder gem to transform address to GPS Coordinates
+gem "geocoder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

@@ -63,6 +63,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_30_115043) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "price"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", force: :cascade do |t|
