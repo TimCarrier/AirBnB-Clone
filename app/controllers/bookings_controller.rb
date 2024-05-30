@@ -14,12 +14,16 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @taxes = (@dog.price * 0.05).round(2)
-    @services_fee = (@dog.price * 0.02).round(2)
+    @services_fee = (@dog.price * 0.04).round(2)
     @total = (@dog.price + @taxes + @services_fee).round(2)
-    if @dog.age <= 5
+    if @dog.age <= 3 && @dog.rating > 4
       @status = "Superpuppy"
-    else
+    elsif @dog.age > 3 && @dog.rating > 4
       @status = "Superdog"
+    elsif @dog.age > 3
+      @status = "Just dog"
+    else
+      @status = "Just puppy"
     end
   end
 
