@@ -1,0 +1,42 @@
+#submit-btn {
+  width: 200px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  // padding-left: 300px;
+  // padding-right: 300px;
+  // width: 100%;
+  width: 40%;
+  background-color: #ff4081;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  border: solid 2px #ff4081;
+
+  text-align: center;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#submit-btn-link {
+  color: white;
+  text-decoration: none;
+  background-color: #ff4081  ;
+  border: 0px;
+}
+
+#submit-btn:hover {
+  text-decoration: none;
+  background-color: white;
+  border: solid 2px #e242a5;
+  color:  #ff4081;
+
+  #submit-btn-link {
+    text-decoration: none;
+    background-color: white;
+    color:  #ff4081;
+  }
+}
