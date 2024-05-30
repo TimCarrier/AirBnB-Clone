@@ -6,6 +6,28 @@ class DogsController < ApplicationController
   end
 
   def show
+    pup_dog = ""
+    rate = ""
+
+    if @dog.age <= 3
+      pup_dog = "puppy"
+    else
+      pup_dog = "dog"
+    end
+
+    if @dog.rating <= 1
+      rate = "Verybad"
+    elsif @dog.rating > 1 && @dog.rating <= 2
+      rate = "Bad"
+    elsif @dog.rating > 2 && @dog.rating <= 3
+      rate = "Good"
+    elsif @dog.rating > 3 && @dog.rating <= 4
+      rate = "Super"
+    else
+      rate = "Best"
+    end
+    @status = "#{rate} #{pup_dog}"
+    @nreviews = rand(30..250)
   end
 
   def new
