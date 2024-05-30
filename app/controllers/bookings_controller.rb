@@ -16,6 +16,11 @@ class BookingsController < ApplicationController
     @taxes = (@dog.price * 0.05).round(2)
     @services_fee = (@dog.price * 0.02).round(2)
     @total = (@dog.price + @taxes + @services_fee).round(2)
+    if @dog.age <= 5
+      @status = "Superpuppy"
+    else
+      @status = "Superdog"
+    end
   end
 
   def create
