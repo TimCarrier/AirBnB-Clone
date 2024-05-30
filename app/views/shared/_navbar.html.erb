@@ -5,7 +5,7 @@
     <% end %>
 
     <%= turbo_frame_tag "search_form", id: "form-height" do%>
-      <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "dogs" }, class: "", id: "form-height" do %>
+      <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "_top" }, class: "", id: "form-height" do %>
         <div id="search-navbar" >
           <%= text_field_tag :query,
                 params[:query],
@@ -49,7 +49,7 @@
 
 <div class="navbar" id="second-nav" >
   <%= turbo_frame_tag "second_nav_frame", id: "form-height" do %>
-    <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "dogs" }, class: "", id: "second-nav-form" do %>
+    <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "_top" }, class: "", id: "second-nav-form" do %>
       <div class="navbar" id="second-nav">
         <button type="submit" id="second-nav-btn" class="btn" name="query" value="">
           <%= image_tag "3775238_animal_dog_grooming_pet_shampoo_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
