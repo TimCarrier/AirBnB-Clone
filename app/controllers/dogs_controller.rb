@@ -56,6 +56,7 @@ class DogsController < ApplicationController
   def create
     @dog = Dog.new(dog_params)
     if @dog.save
+      # @dog.photos.attach(params[:photos]) if params[:photos].present?
       redirect_to dog_path(@dog)
     else
       render :new, status: 422
@@ -80,7 +81,7 @@ class DogsController < ApplicationController
 
   private
   def dog_params
-    params.require(:dog).permit(:name, :age, :disponibility, :race, :description, :address)
+    params.require(:dog).permit(:name, :age, :disponibility, :race, :description, :address, photos: [])
   end
 
   def set_dog
