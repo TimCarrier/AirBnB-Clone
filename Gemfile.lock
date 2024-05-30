@@ -73,7 +73,6 @@ GEM
       activerecord (= 7.1.3.3)
       activesupport (= 7.1.3.3)
       marcel (~> 1.0)
-    activestorage-cloudinary-service (0.2.3)
     activesupport (7.1.3.3)
       base64
       bigdecimal
@@ -323,7 +322,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activestorage-cloudinary-service
   autoprefixer-rails
   bootsnap
   bootstrap (~> 5.2)
