@@ -1,21 +1,9 @@
   <h1>Our dogs</h1>
 
 <div class="container">
-<div class="row">
-      <% @dogs.each do |dog| %>
-      <%= link_to dog_path(dog), class:"col-3" do %>
-        <div class="card">
-          <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 200, height: 150, crop: :fill) %>
-          <div class="card-body">
-            <h5 class="card-title"><%= dog.name %></h5>
-            <p class="card-text"><%= dog.race %></p>
-            <p class="card-text">Book now for <%= dog.price %> €</p>
-            <p class="card-text"><%= dog.disponibility %></p>
-          </div>
-        </div>
-      <% end %>
-      <% end %>
-</div>
+  <%= turbo_frame_tag "dogs"  do  %>
+    <%= render partial:  "shared/dogs_list", locals: {dogs:  @dogs} %>
+  <% end %>
 </div>
 
 <%# test d'une photo cloudinary en display sur localhost:3000/dogs %>
