@@ -102,6 +102,15 @@ a {
   // padding-inline-end: 80px;
 }
 
+#second-nav {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#second-nav::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
 #second-nav-btn {
   display: flex;
   align-items: center;
