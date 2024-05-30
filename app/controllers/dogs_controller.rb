@@ -40,6 +40,11 @@ class DogsController < ApplicationController
     end
     @status = "#{rate} #{pup_dog}"
     @nreviews = rand(30..250)
+    
+    @markers = @dog.geocoded.map do {
+      lat: @dog.latitude,
+      lng: @dog.longitude}
+	  end
   end
 
   def new
