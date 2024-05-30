@@ -5,7 +5,7 @@
     <div class="cards">
       <%= link_to user_booking_path(@user, booking) do %>
         <div class="card" width="18rem;">
-          <img class="card-img-top" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS" alt="dog photo">
+          <%= cl_image_tag booking.dog.photos.first.key, class:"card-img-top" %>
           <div class="card-body">
             <p class="card-text">Check your date with <em><%= booking.dog.name %></em></p>
             <br>
