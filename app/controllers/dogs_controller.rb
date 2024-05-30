@@ -6,6 +6,10 @@ class DogsController < ApplicationController
   end
 
   def show
+    @markers = @dog.geocoded.map do {
+      lat: @dog.latitude,
+      lng: @dog.longitude}
+	  end
   end
 
   def new
