@@ -13,7 +13,8 @@
       </div>
       <div>
         <%= simple_form_for [@dog, @booking] do |f| %>
-          <%= f.input :date %>
+          <%= f.input :date, as: :string, placeholder: "Choose a date",
+            input_html: { data: { controller: "datepicker" }} %>
           <%= f.submit "Book your buddy", class: "btn btn-primary" %>
         <% end %>
       </div>
