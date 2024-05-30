@@ -46,3 +46,92 @@
     </div>
   </div>
 </div>
+
+<div class="navbar" id="second-nav" >
+  <%= turbo_frame_tag "second_nav_frame", id: "form-height" do %>
+    <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "dogs" }, class: "", id: "second-nav-form" do %>
+      <div class="navbar" id="second-nav">
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="">
+          <%= image_tag "3775238_animal_dog_grooming_pet_shampoo_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Washed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Big Doggy">
+          <%= image_tag "6366332_animal_breed_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Big Doggy</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Sick Doggy">
+          <%= image_tag "3775240_animal_dog_medical_patient_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Sick Doggy</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Dalmatian">
+          <%= image_tag "6366337_animal_breed_dalmatian_dog_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Dalmatian</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Beagle">
+          <%= image_tag "6366320_animal_beagle_breed_dog_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Beagle</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Husky">
+          <%= image_tag "6366344_animal_basenji_breed_dog_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Husky</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Chihuahua">
+          <%= image_tag "6366335_breed_chihuahua_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Chihuahua</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Bull Terrier">
+          <%= image_tag "6366318_breed_bull terrier_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Bull Terrier</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="English Bulldog">
+          <%= image_tag "6366334_breed_chihuahua_dog_long hair_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>English Bulldog</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Shiba Inu">
+          <%= image_tag "6366322_breed_dog_inu_japan_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Shiba Inu</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Purebred">
+          <%= image_tag "6366343_breed_dog_pedigree_pet_purebred_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Purebred</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Miniature Pedigree">
+          <%= image_tag "6366340_animal_breed_dog_miniature_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Miniature Pedigree</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366333_animal_breed_canine_dog_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Malinois">
+          <%= image_tag "3775255_animal_canine_cute_dog_doggy_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Malinois</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366324_animal_breed_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366317_animal_breed_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366323_animal_breed_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366328_breed_chihuahua_dog_long hair_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366345_animal_basenji_breed_dog_pedigree_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+        <button type="submit" id="second-nav-btn" class="btn" name="query" value="Breed">
+          <%= image_tag "6366342_animal_breed_dog_pedigree_pet_icon.svg", class: "", alt: "", id: "", size: "40x40" %>
+          <p>Breed</p>
+        </button>
+      </div>
+    <% end %>
+  <% end %>
+</div>
