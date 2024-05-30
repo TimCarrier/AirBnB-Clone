@@ -1,9 +1,21 @@
-.big-dog-show-container {
+body {
+  background-color: white;
+}
+
+hr {
   display: block;
+  height: 1px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.big-dog-show-container {
+  // display: block;
   margin-top: 20px;
   width: 80%;
   margin: auto;
-  background-color: whitesmoke;
+  // background-color: white;
 
   display: flex;
   flex-direction: column;
@@ -13,25 +25,26 @@
   padding-bottom: 20px;
 }
 
-
-
 .name-race-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   margin-bottom: 20px;
+  margin-left: 250px;
+  margin-top: 20px;
 
-  h1, p {
-    // Add any specific styles for h1 and p here
+  h1, h2 { // Change this line
+    padding: 10px;
   }
 }
+
 
 .dog-pictures-container {
   display: grid;
   display: flex;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
 }
 
 .big-picture-container {
@@ -42,21 +55,110 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-
 }
 
 .small-card-dog {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all .5s ease-in-out;
+}
 
+.small-card-dog:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
 .big-dog-card {
-  border-radius: 5% 0% 0% 5% / 5% 0% 0% 5%
+  border-radius: 5% 0% 0% 5% / 5% 0% 0% 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all .2s ease-in-out;
+}
+
+.big-dog-card:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
 #top-right-dog-card {
-  border-radius: 0% 5% 0% 0% / 0% 5% 0% 0%
+  border-radius: 0% 5% 0% 0% / 0% 5% 0% 0%;
 }
 
-#top-left-dog-card {
-  border-radius: 0% 0% 5% 0% / 0% 0% 5% 0%
+#bottom-right-dog-card {
+  border-radius: 0% 0% 5% 0% / 0% 0% 5% 0%;
 }
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.booking-btn {
+  width: 200px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  // padding-left: 300px;
+  // padding-right: 300px;
+  width: 100%;
+  background-color: #e242a5;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  border: solid 2px #e242a5;
+
+  text-align: center;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.booking-btn-link {
+  color: white;
+  text-decoration: none;
+}
+
+.booking-btn:hover {
+  text-decoration: none;
+  background-color: white;
+  border: solid 2px #e242a5;
+  color:  #e242a5;
+
+  .booking-btn-link {
+    text-decoration: none;
+    background-color: white;
+    color:  #e242a5;
+  }
+}
+
+.infos-booking-container {
+  // display: grid;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-gap: 25px;
+}
+
+.infos-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 700px;
+}
+
+
+// height: 1px;
+// width: 50%;
+// margin-left: auto;
+// margin-right: auto;

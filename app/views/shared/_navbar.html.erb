@@ -4,9 +4,19 @@
       <%= image_tag "giphy.gif", height: "70px" %>
     <% end %>
 
-    <form>
-      <input type="text" id="Dog-Search" class="form-control">
-    </form>
+    <%= turbo_frame_tag "search_form", id: "form-height" do%>
+      <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "dogs" }, class: "", id: "form-height" do %>
+        <div id="search-navbar" >
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Browse all Tail Waggers",
+                id: "search-navbar-input"
+            %>
+          <%= submit_tag "", name: "", class: "btn btn-link", id: "search-navbar-btn" %>
+        </div>
+      <% end %>
+    <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
