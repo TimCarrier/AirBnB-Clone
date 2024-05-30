@@ -9,7 +9,8 @@ export default class extends Controller {
       dateFormat: "Y-m-d",
       "disable": [
         function(date) {
-          return (date.getDay() === Math.floor(Math.random() * 7) || date.getDay() === Math.floor(Math.random() * 7));
+          // return (date.getDay() === Math.floor(Math.random() * 7) || date.getDay() === Math.floor(Math.random() * 7));
+          return (date.getDay() === 3 || date.getDay() === 6);
         }
       ],
       "locale": {
