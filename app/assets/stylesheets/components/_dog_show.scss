@@ -101,19 +101,21 @@ body {
 }
 
 .booking-btn {
-  width: 200px;
+  // width: 200px;
   margin-top: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   // padding-left: 300px;
   // padding-right: 300px;
   width: 100%;
-  background-color: #ff4081;
+  background-color: #ef233c;
   border: none;
   border-radius: 10px;
   font-size: 20px;
   text-decoration: none;
-  border: solid 2px #ff4081;
+  border: solid 2px #ef233c;
+  display: flex;
+  justify-content: center;
 
   text-align: center;
 
@@ -125,18 +127,19 @@ body {
 .booking-btn-link {
   color: white;
   text-decoration: none;
+  width: 100%;
 }
 
 .booking-btn:hover {
   text-decoration: none;
   background-color: white;
-  border: solid 2px #e242a5;
-  color:  #ff4081;
+  border: solid 2px #f3102a;
+  color:  #ef233c;
 
   .booking-btn-link {
     text-decoration: none;
     background-color: white;
-    color:  #ff4081;
+    color:  #ef233c;
   }
 }
 
