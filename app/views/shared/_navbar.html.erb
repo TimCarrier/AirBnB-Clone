@@ -3,6 +3,7 @@
     <%= link_to root_path , class: "" do %>
       <%= image_tag "giphy.gif", height: "70px" %>
     <% end %>
+    <h4>Tail Wagger</h4>
 
     <%= turbo_frame_tag "search_form", id: "form-height" do%>
       <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "_top" }, class: "", id: "form-height" do %>
@@ -13,7 +14,9 @@
                 placeholder: "Browse all Tail Waggers",
                 id: "search-navbar-input"
             %>
-          <%= submit_tag "", name: "", class: "btn btn-link", id: "search-navbar-btn" %>
+          <%= button_tag type: 'submit', class: 'btn btn-flat', id: 'search-navbar-btn' do %>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png" alt="">
+          <% end %>
         </div>
       <% end %>
     <% end %>
