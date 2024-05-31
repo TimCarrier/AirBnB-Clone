@@ -14,7 +14,7 @@
                   <%= cl_image_tag booking.dog.photos.first.key, width: 290, height: 250, crop: :fill, class:"book-dog-portrait" %>
                 </div>
                   <div class="book-dog-infos">
-                    <h4 class="text-booking">Check your date with <strong><%= booking.dog.name %></strong>!</h4>
+                    <%# <h4 class="text-booking">Check your date with <strong><%= booking.dog.name %>
                     <p class="text-booking"><%= booking.dog.name %> is a nice <%= booking.dog.race %></p>
                     <p class="text-booking">Rating: <%= '⭐️' * booking.dog.rating %></p>
                     <hr>
