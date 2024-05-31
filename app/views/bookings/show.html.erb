@@ -4,7 +4,7 @@
   <div class="col-7">
     <h1>Your reservation</h1>
     <p>Confirmation code: HMZXMX334B</p>
-    <hr>
+    <hr>    
     <div>
       <h4>Here are the details of your booking</h4>
       <p>Your next date with <%= @booking.dog.name %> is on <%= @booking.date %></p>
@@ -34,7 +34,7 @@
       <img id="happy-dog-gif" src="https://64.media.tumblr.com/tumblr_lzvby6xiXI1qg6rkio1_500.gifv" alt="funny GIF" width="35%">
     </div>
     <div class="btn-danger-container">
-      <%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger-styled-link"  %>
+      <%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger-styled-link" %>
     </div>
   </div>
 </div>

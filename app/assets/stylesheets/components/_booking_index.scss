@@ -1,0 +1,71 @@
+.reserved-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-container {
+  display: flex;
+  border: solid 2px black;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+
+  transition: all .2s ease-in-out;
+}
+
+.book-dog-portrait {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.book-dog-info {
+  display: flex;
+}
+
+.booking-link {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.big-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-booking {
+  text-decoration: none;
+  color: black;
+}
+
+.book-container:hover {
+  transform: scale(1.05);
+}
+
+
+

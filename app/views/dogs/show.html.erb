@@ -5,23 +5,21 @@
     <h2><%= @dog.race %></h2>
   </div>
 
-
-  <div class="dog-pictures-container">
-
-    <div class="big-picture-container">
-      <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 580, height: 510, crop: :fill, class: "big-dog-card") %>
-      <% @dog.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>
-      <% end %>
-    </div>
-    <%# <div class="four-pictures-container"> %>
-      <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
-      <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "top-right-dog-card") %>
-      <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
-    <%# </div> %>
-
+<div class="dog-pictures-container">
+  <% photos = @dog.photos %>
+  <% photos = photos.size > 0 ? photos.cycle.take(5) : [] %>
+  <% photos.each_with_index do |photo, index| %>
+    <% if index == 0 %>
+      <div class="big-picture-container">
+        <%= cl_image_tag photo.key, width: 580, height: 510, crop: :fill, class: "big-dog-card" %>
+      </div>
+      <div class="four-pictures-container">
+    <% elsif index.between?(1, 4) %>
+      <%= cl_image_tag photo.key, width: 290, height: 250, crop: :fill, class: "small-card-dog", id: index == 2 ? "top-right-dog-card" : index == 4 ? "bottom-right-dog-card" : "" %>
+    <% end %>
+  <% end %>
   </div>
-
+</div>
 
 <div class="infos-booking-container">
 
