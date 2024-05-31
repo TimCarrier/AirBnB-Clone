@@ -41,6 +41,9 @@ class BookingsController < ApplicationController
       end
     end
     @buddies = (10..50).to_a.sample
+    @marker = {
+      lat: @dog.latitude,
+      lng: @dog.longitude}
   end
 
   def create

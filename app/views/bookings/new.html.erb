@@ -12,6 +12,20 @@
         </div>
       </div>
       <div>
+        <h5>Your booking</h5>
+        <p><%= @dog.name %> • <%= @dog.age %> years old</p>
+        <div style="width: 100%; height: 300px;" class="me-4"
+          data-controller="map"
+          data-map-marker-value="<%= @marker.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+        <hr>
+        <h5>Cancellation Terms & Conditions</h5>
+        <p>This booking is not refundable</p>
+      </div>
+      <hr class="m-0 p-0">
+      <div class="mt-0">
+        <h5>Choose a date for your booking</h5>
         <%= simple_form_for [@dog, @booking] do |f| %>
           <%= f.input :date, as: :string, placeholder: "Choose a date",
             input_html: { data: { controller: "datepicker" }} %>
@@ -23,7 +37,7 @@
         <% end %>
       </div>
     </div>
-    <div class="p-3 col-6 card me-2 rounded">
+    <div class="col-6 card me-2 rounded">
       <div class="card-body">
         <div class="d-flex gap-10">
           <%= cl_image_tag @dog.photos.first.key, height: 100, width: 100, crop: :fill, class:"rounded-3 float-start"%>
