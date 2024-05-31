@@ -8,22 +8,34 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = @user.bookings.find(params[:id])
+    unless @user.bookings.exists?(params[:id])
+      redirect_to user_bookings_path(@user), alert: "You don't have access to this booking"
+    else
+      @booking = @user.bookings.find(params[:id])
+    end
   end
 
   def new
     @booking = Booking.new
-    @taxes = (@dog.price * 0.05).round(2)
-    @services_fee = (@dog.price * 0.04).round(2)
-    @total = (@dog.price + @taxes + @services_fee).round(2)
-    if @dog.age <= 3 && @dog.rating > 4
-      @status = "Superpuppy"
-    elsif @dog.age > 3 && @dog.rating > 4
-      @status = "Superdog"
-    elsif @dog.age > 3
-      @status = "Just dog"
+    if @dog.price
+      @taxes = (@dog.price * 0.05).round(2)
+      @services_fee = (@dog.price * 0.04).round(2)
+      @total = (@dog.price + @taxes + @services_fee).round(2)
     else
-      @status = "Just puppy"
+      @taxes = 1.5
+      @services_fee = 0.7
+      @total = @taxes + @services_fee + 10
+    end
+    if @dog.rating
+      if @dog.age <= 3 && @dog.rating > 4
+        @status = "Superpuppy"
+      elsif @dog.age > 3 && @dog.rating > 4
+        @status = "Superdog"
+      elsif @dog.age > 3
+        @status = "Just dog"
+      else
+        @status = "Just puppy"
+      end
     end
   end
 
@@ -41,7 +53,6 @@ class BookingsController < ApplicationController
   def destroy
     @booking = @user.bookings.find(params[:id])
     @booking.destroy
-    redirect_to root_path
   end
 
   private
