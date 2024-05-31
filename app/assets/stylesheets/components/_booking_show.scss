@@ -96,7 +96,7 @@ $color-pink: #fe4365;
   border-radius: 10px;
   font-size: 20px;
   text-decoration: none;
-  border: solid 2px red;
+  border: solid 2px #ef233c;
 
   text-align: center;
 
@@ -106,7 +106,7 @@ $color-pink: #fe4365;
 }
 
 .btn-danger-styled-link {
-  color: red;
+  color: #ef233c;
   text-decoration: none;
   background-color: white  ;
   border: 0px;
@@ -114,13 +114,13 @@ $color-pink: #fe4365;
 
 .btn-danger-container:hover {
   text-decoration: none;
-  background-color: red;
-  border: solid 2px red;
+  background-color: #ef233c;
+  border: solid 2px #ef233c;
   color:  white;
 
   .btn-danger-styled-link {
     text-decoration: none;
-    background-color: red;
+    background-color: #ef233c;
     color:  white;
   }
 }
