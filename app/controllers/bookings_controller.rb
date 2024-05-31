@@ -12,10 +12,10 @@ class BookingsController < ApplicationController
       redirect_to user_bookings_path(@user), alert: "You don't have access to this booking"
     else
       @booking = @user.bookings.find(params[:id])
+      @marker = {
+        lat: @booking.dog.latitude,
+        lng: @booking.dog.longitude}
     end
-    @marker = {
-      lat: @booking.dog.latitude,
-      lng: @booking.dog.longitude}
   end
 
   def new
@@ -60,6 +60,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = @user.bookings.find(params[:id])
     @booking.destroy
+    redirect_to user_bookings_path(@user)
   end
 
   private
