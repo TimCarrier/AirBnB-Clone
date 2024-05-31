@@ -13,6 +13,9 @@ class BookingsController < ApplicationController
     else
       @booking = @user.bookings.find(params[:id])
     end
+    @marker = {
+      lat: @booking.dog.latitude,
+      lng: @booking.dog.longitude}
   end
 
   def new
@@ -37,6 +40,10 @@ class BookingsController < ApplicationController
         @status = "Just puppy"
       end
     end
+    @buddies = (10..50).to_a.sample
+    @marker = {
+      lat: @dog.latitude,
+      lng: @dog.longitude}
   end
 
   def create

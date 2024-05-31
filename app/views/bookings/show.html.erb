@@ -1,23 +1,40 @@
 <link href="https://fonts.googleapis.com/css?family=Baloo+2:400,800&display=swap" rel="stylesheet">
 
-<div class="container d-flex p-5">
-  <div>
+<div class="container d-flex gap-4 p-5">
+  <div class="col-7">
     <h1>Your reservation</h1>
+    <p>Confirmation code: HMZXMX334B</p>
+    <hr>    
+    <div>
+      <h4>Here are the details of your booking</h4>
+      <p>Your next date with <%= @booking.dog.name %> is on <%= @booking.date %></p>
+      <hr>
+      <h5>Some details about <%= @booking.dog.name %></h5>
+      <p>My name is <%= @booking.dog.name %></p>
+      <p>I am a little sunshine of <%= @booking.dog.age %> years old - A <%= @booking.dog.race %></p>
+      <p><%= @booking.dog.description %></p>
+      <hr>
+      <p>You can pick me up here <%= @booking.dog.address %></p>
+    </div>
+    <div style="width: 100%; height: 300px;" class="me-4"
+      data-controller="map"
+      data-map-marker-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
     <hr>
-    <p>Your next date with <strong><%= @booking.dog.name %></strong> is on <%= @booking.date %></p>
+    <h5>Get support anytime</h5>
+    <p>If you need help, we’re available 24/7 from anywhere in the world.</p>
+  </div>
+  <div class="col-5 d-flex flex-column gap-3">
     <p><strong>Here is a message from <%= @booking.dog.name %> :</strong></p>
     <div class="d-flex justify-content-around gap-3">
-      <p id="bubble-chat">Thank you, <%= @booking.user.username %> for booking me. Let's have fun and I will do my best to find a perfect girl/guy/they/them for you</p>
+      <p id="bubble-chat">Thank you, <%= @booking.user.username %> for booking me. Let's have fun and I will do my best to find a perfect girl/guy/they for you</p>
     </div>
     <div>
       <img id="happy-dog-gif" src="https://64.media.tumblr.com/tumblr_lzvby6xiXI1qg6rkio1_500.gifv" alt="funny GIF" width="35%">
     </div>
-  </div>
-  <div>
     <div class="btn-danger-container">
       <%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger-styled-link" %>
-
     </div>
   </div>
 </div>
-<div></div>
