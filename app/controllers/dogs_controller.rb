@@ -45,8 +45,9 @@ class DogsController < ApplicationController
 
     @marker = {
       lat: @dog.latitude,
-      lng: @dog.longitude}
-
+      lng: @dog.longitude,
+      # info_window_html: render_to_string(partial: "components/info_window", locals: {dog: @dog})
+    }
   end
 
   def new
