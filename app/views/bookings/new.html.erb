@@ -5,14 +5,12 @@
       <div class="border rounded p-4">
         <div class="float-start">
           <h4>This is a rare find.</h4>
-          <p><%= @dog.name %> helped 300 buddies find their loves!</p>
+          <p><%= @dog.name %> helped <%= @buddies %> buddies find their loves!</p>
         </div>
         <div class="rounded-3 float-end">
           <%= image_tag "star.gif", height: "70px" %>
         </div>
       </div>
-
-
       <div>
         <%= simple_form_for [@dog, @booking] do |f| %>
           <%= f.input :date, as: :string, placeholder: "Choose a date",
@@ -25,11 +23,6 @@
         <% end %>
       </div>
     </div>
-
-
-
-
-
     <div class="p-3 col-6 card me-2 rounded">
       <div class="card-body">
         <div class="d-flex gap-10">
