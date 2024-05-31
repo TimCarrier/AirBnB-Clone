@@ -4,7 +4,7 @@
   <div>
     <h1>Your reservation</h1>
     <hr>
-    <p>Your next date with <%= @booking.dog.name %> is on <%= @booking.date %></p>
+    <p>Your next date with <strong><%= @booking.dog.name %></strong> is on <%= @booking.date %></p>
     <p><strong>Here is a message from <%= @booking.dog.name %> :</strong></p>
     <div class="d-flex justify-content-around gap-3">
       <p id="bubble-chat">Thank you, <%= @booking.user.username %> for booking me. Let's have fun and I will do my best to find a perfect girl/guy/they/them for you</p>
@@ -15,8 +15,7 @@
   </div>
   <div>
     <div class="btn-danger-container">
-      <%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger-styled-link"  %>
-      <%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger-styled-link"  %>
+      <%= link_to "Cancel your booking", user_booking_path(@booking.user, @booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-danger-styled-link" %>
 
     </div>
   </div>

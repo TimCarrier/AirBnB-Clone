@@ -14,11 +14,17 @@
       <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>
       <% end %>
     </div>
-    <%# <div class="four-pictures-container"> %>
+    <!-- <%# <div class="four-pictures-container"> %>
       <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
       <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog", id: "top-right-dog-card") %>
       <%# <%= cl_image_tag("qd2ngefcpsykehj9toyk", width: 290, height: 250, crop: :fill, class: "small-card-dog") %>
-    <%# </div> %>
+    <%# </div> %> -->
+
+    <% @dog.photos.each_with_index do |photo, index| %>
+        <% if index == 0 %> <!-- Change this to select the photo you want -->
+        <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>
+      <% end %>
+    <% end %>
 
   </div>
 
