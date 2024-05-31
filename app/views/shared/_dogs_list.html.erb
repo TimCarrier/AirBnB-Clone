@@ -2,13 +2,17 @@
       <% @dogs.each do |dog| %>
       <%= link_to dog_path(dog), class:"col-3", data: { turbo_frame: "_top" } do %>
         <div class="card">
-          <% dog.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill %>
-          <% end %>
+          <span class="card-btn"></span>
+          <span class="card-index">.....</span>
+          <div class="card-images">
+            <% dog.photos.each do |photo| %>
+              <%= cl_image_tag photo.key, height: 288, width: 302, crop: :fill %>
+            <% end %>
+          </div>
           <div class="card-body">
-            <h5 class="card-title"><%= dog.name %></h5>
+            <h5 class="card-text-bold"><%= dog.name %></h5>
             <p class="card-text"><%= dog.race %></p>
-            <p class="card-text">Book now for <%= dog.price %> €</p>
+            <h5 class="card-text-bold">Book now for <%= dog.price %> €</h5>
             <p class="card-text"><%= dog.disponibility %></p>
           </div>
         </div>
