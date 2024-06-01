@@ -86,8 +86,8 @@ $color-pink: #fe4365;
 
 .btn-danger-container {
   margin-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   // padding-left: 300px;
   // padding-right: 300px;
   // width: 100%;
@@ -103,6 +103,10 @@ $color-pink: #fe4365;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
               rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
               rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  p {
+    margin: 0;
+    padding-right: 10px;
+  }
 }
 
 .btn-danger-styled-link {
