@@ -3,7 +3,7 @@
     <%= link_to root_path , class: "" do %>
       <%= image_tag "giphy.gif", height: "70px" %>
     <% end %>
-    <h4>Tail Wagger</h4>
+    <h4 class="logo-h4">Tail Wagger</h4>
 
     <%= turbo_frame_tag "search_form", id: "form-height" do%>
       <%= form_with url: root_path, method: :get, local: false, data: { turbo_frame: "_top" }, class: "", id: "form-height" do %>
